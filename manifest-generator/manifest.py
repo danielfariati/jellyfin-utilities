@@ -153,7 +153,7 @@ class Manifest:
     def close(self) -> None:
         """Persist the manifest metadata to disk."""
         with open(self.manifest_file, 'w') as fh:
-            json.dump(self.manifest, fh)
+            json.dump(self.manifest, fh, indent=4)
 
 
 if __name__ == '__main__':
